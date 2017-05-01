@@ -1,0 +1,17 @@
+<div class="container">
+  {{#each model as |piece|}}
+    <div class = "row">
+      <div class="piece">
+        <br />
+        <img  src={{piece.photo_url}} style='height:95%; width: 95%; max-height: 400px'>
+        <br />
+        {{piece.title}}
+        <br />
+        $ {{piece.price}}
+        <br />
+      </div>
+    </div>
+  {{/each}}
+</div>
+
+{{outlet}}

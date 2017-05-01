@@ -1,0 +1,78 @@
+.artist img {
+  margin:auto;
+  display:block;
+}
+
+.artist button {
+  margin:auto;
+  display:block;
+}
+
+.artist h5 {
+  text-align: center;
+}
+
+.piece {
+  margin: auto;
+  text-align: center;
+  font-size: 16px;
+}
+
+.container {
+  font-family: "Georgia", Times, serif;
+}
+
+.artist_profile {
+  text-align: center;
+}
+
+/*
+
+.col-xs-6 {
+  border-style: solid;
+  border-color: green;
+}
+
+.row {
+  border-style: solid;
+  border-color: pink;*/
+
+/*.col-6 {
+  border-style: solid;
+  border-color: black;
+}
+
+.row-6 {
+  border-style: solid;
+  border-color: black;
+}
+
+
+}*/
+
+/*.row-9 {
+  border-style: solid;
+  border-color: red;
+}
+
+.row-3 {
+  border-style: solid;
+  border-color: blue;
+}*/
+
+/*.row-12 {
+  border-style: solid;
+  border-color: green;
+}
+
+
+
+.row-9 {
+  border-style: solid;
+  border-color: black;
+}
+
+#hello {
+  border-style: solid;
+  border-color: blue;
+}*/

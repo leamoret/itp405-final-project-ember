@@ -1,0 +1,25 @@
+<div class="container">
+  <div class="col-xs-6">
+    {{#each model as |artist|}}
+      <div class= "row">
+        {{#link-to 'admin.artists.new'}}
+          <h4>Add an artist</h4>
+          <br />
+        {{/link-to}}
+      </div>
+      <div class = "row">
+        <div class="artist_admin">
+          <img src= "{{artist.photo_url}}" >
+          <br />
+          <h5>{{artist.name}}</h5>
+          <button onclick={{action 'deleteArtist' artist.id}}>Delete Artist</button>
+          <br />
+          <br />
+        </div>
+      </div>
+    {{/each}}
+  </div>
+  <div class="col-xs-6">
+    {{outlet}}
+  </div>
+</div>

@@ -1,0 +1,29 @@
+<div class="container">
+  <div class = "row">
+    <div class = "col-xs-6">
+        {{#each model as |artist|}}
+          <div class="artist">
+            {{#link-to 'artists.artist' artist.id}}
+              <div class="row-9">
+                <img src= "{{artist.photo_url}}" >
+              </div>
+              <div class="row-3">
+                <h5>
+                  {{artist.name}}
+                  <br />
+                  Endorsements: {{artist.endorsement}}
+                  <br />
+                </h5>
+                <!-- <button onclick={{action 'endorseArtist' artist.id artist.endorsement}}>Endorse</button> -->
+              </div>
+              {{/link-to}}
+          </div>
+        {{/each}}
+    </div>
+    <div class = "col-xs-6">
+      <div class="row">
+        {{outlet}}
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,17 @@
+<h4>Add an New Artist</h4>
+
+<form onsubmit={{action 'createArtist'}}>
+  <br />
+    Name     :{{input type="text" value=name}}
+    <br />
+    Age      :{{input type="text" value=age}}
+    <br />
+    Biography:{{input type="text" value=biography}}
+    <br />
+    Photo    :{{input type="text" value=photo_url}}
+    <br />
+    <br />
+    <button type="submit">Save</button>
+</form>
+
+{{outlet}}
