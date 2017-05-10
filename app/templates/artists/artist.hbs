@@ -1,8 +1,10 @@
 <div class="artist_profile">
   <div class="row-xs-3">
     <h3>{{model.artist.artist.name}}</h3>
-    <h5> Endorsements: {{model.artist.artist.endorsement}}</h5>
-    <button onclick={{action 'endorseArtist' model.artist.artist.id model.artist.artist.endorsement}}>Endorse Artist</button>
+    <h5> Endorsements: </h5>
+    <h5 id="endorse">{{model.artist.artist.endorsement}}</h5>
+    <button id="endorse_button" onclick={{action 'endorseArtist' model.artist.artist.id model.artist.artist.endorsement}}>Endorse Artist</button>
+    <h5 id="endorsed" style="visibility:'hidden';"></h5>
     <br />
     <br />
     <h5> Age: {{model.artist.artist.age}}</h5>
@@ -15,7 +17,7 @@
       <div name="artist_pieces">
         {{#each model.artist.pieces as |piece|}}
           <div class=row style='height: 200px;' >
-            <img id ="artist_images" style='height: 80%; width: 80%; margin:auto;' src= "{{piece.photo_url}}" >
+            <img id ="artist_images" style='height: 80%; width: 50%; margin:auto;' src= "{{piece.photo_url}}" >
             <br />
             {{piece.title}}
           </div>

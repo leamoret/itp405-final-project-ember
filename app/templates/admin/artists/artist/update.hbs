@@ -1,0 +1,15 @@
+<form onsubmit={{action 'updateArtist' model.artist.artist.id}}>
+  <br />
+    Change Name:{{input type="text" value=name}}
+    <br />
+    Change Age:{{input type="text" value=age}}
+    <br />
+    Change Biography:{{input type="text" value=biography}}
+    <br />
+    Change Photo_url:{{input type="text" value=photo_url}}
+    <br />
+    <br />
+    <button type="submit">Update Artist</button>
+</form>
+
+{{outlet}}

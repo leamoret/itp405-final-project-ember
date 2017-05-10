@@ -1,0 +1,15 @@
+<h4>Update Piece Information</h4>
+
+<form onsubmit={{action 'updatePiece' model.piece.piece.id}}>
+  <br />
+    Change Title:{{input type="text" value=title}}
+    <br />
+    Change Price:{{input type="text" value=price}}
+    <br />
+    Change Photo_url:{{input type="text" value=photo_url}}
+    <br />
+    <br />
+    <button type="submit">Save</button>
+</form>
+
+{{outlet}}

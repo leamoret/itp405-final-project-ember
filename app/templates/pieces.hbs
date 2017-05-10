@@ -3,12 +3,16 @@
     <div class = "row">
       <div class="piece">
         <br />
-        <img  src={{piece.photo_url}} style='height:95%; width: 95%; max-height: 400px'>
+        <img  src={{piece.photo_url}} style='height:100%; width: 90%; max-height: 500px; max-width: 1000px'>
         <br />
         {{piece.title}}
         <br />
         $ {{piece.price}}
         <br />
+        {{#link-to 'comments.comment' piece.id}} 
+          <h4>Comments</h4>
+          <br />
+        {{/link-to}}
       </div>
     </div>
   {{/each}}

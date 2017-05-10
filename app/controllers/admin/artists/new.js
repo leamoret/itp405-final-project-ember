@@ -4,7 +4,6 @@ export default Ember.Controller.extend({
   actions: {
     createArtist(e) {
       e.preventDefault();
-      console.log(this.get('name'));
       let promise = $.ajax({
         url: 'http://localhost:3000/api/v1/artists',
         type: 'POST',
@@ -17,11 +16,18 @@ export default Ember.Controller.extend({
         })
       });
       promise.then((response) => {
+        //send message to user
+        if(response.error) {
+          alert('Error: ' + response.error)
+        }
+        else {
+          this.get('model').pushObject(response);
+          alert('Artist was added.')
+        }
         this.set('name', null);
         this.set('age', null);
         this.set('biography', null);
         this.set('photo_url', null);
-        //this.get('model').pushObject(response);
       });
     }
   }

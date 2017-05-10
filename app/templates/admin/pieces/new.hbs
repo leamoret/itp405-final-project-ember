@@ -1,0 +1,18 @@
+<h4>Add A New Piece</h4>
+
+<form onsubmit={{action 'createPiece'}}>
+  <br />
+    Title     :{{input type="text" value=title}}
+    <br />
+    Price      :{{input type="text" value=price}}
+    <br />
+    Artist Name: {{input type="text" value=artist_name}}
+    <br />
+    Photo_url    :{{input type="text" value=photo_url}}
+    <br />
+    <br />
+    <button type="submit">Save</button>
+    <br />
+</form>
+
+{{outlet}}

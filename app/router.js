@@ -12,15 +12,26 @@ Router.map(function() {
     this.route('artist', {path: ':id'});
   });
   this.route('home');
-  this.route('about');
   this.route('admin', function() {
     this.route('artists', function() {
       this.route('new');
+      this.route('artist', {path: ':id'}, function() {
+        this.route('new');
+        this.route('update');
+      });
     });
-    this.route('pieces');
+    this.route('pieces', function() {
+      this.route('new');
+      this.route('piece', {path: ':id'});
+    });
   });
   this.route('pieces', function() {
-    this.route('piece');
+    this.route('piece', {path: ':id'});
+  });
+  this.route('comments', function() {
+    this.route('comment', {path: ':id'}, function() {
+      this.route('new');
+    });
   });
 });
 

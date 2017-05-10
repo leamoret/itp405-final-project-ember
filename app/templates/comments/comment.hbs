@@ -1,0 +1,24 @@
+<div class="row-xs-3">
+  <h4>{{model.piece.piece.title}}</h4>
+  <img style='height: 60%; width: 60%; margin:auto;' src= "{{model.piece.piece.photo_url}}" >
+</div>
+<div class="row-xs-9">
+  {{#if model.piece.comments}}
+    <h4>Comments:</h4>
+    <div name="artist_pieces">
+      {{#each model.piece.comments as |comment|}}
+        <div class=row style='padding:5px; margin: 10px;' >
+          {{comment.content}}
+        </div>
+      {{/each}}
+    </div>
+  {{/if}}
+  <div style='padding-bottom:20px;'>
+    <form onsubmit={{action 'addComment' model.piece.piece.id}}>
+      {{input type="textarea" value=comment}}
+      <br />
+      <button type="submit">Save</button>
+    </form>
+    {{outlet}}
+  </div>
+</div>

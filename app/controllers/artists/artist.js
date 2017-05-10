@@ -2,10 +2,11 @@ import Ember from 'ember';
 
 export default Ember.Controller.extend({
   actions: {
-    endorseArtist(id, number) {
+    endorseArtist(id, number, e) {
+      e.preventDefault();
       var endorsements = number + 1;
-      console.log(id)
-      let promise = $.ajax({
+
+      let promise = Ember.$.ajax({
         url: `http://localhost:3000/api/v1/artists/${id}`,
         type: 'PUT',
         contentType: "application/json; charset=utf-8",
@@ -14,8 +15,8 @@ export default Ember.Controller.extend({
         })
       });
       promise.then((response) => {
-        console.log('success');
-        //FIND A WAY TO REFRESH THE PAGE
+        alert('Thank you for endorsing this artist.')
+        location.reload();
       });
     }
   }

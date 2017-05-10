@@ -1,1 +1,24 @@
-{{outlet}}
+<div class="container">
+  <div class="col-xs-6">
+    {{#each model as |piece|}}
+      <div class = "row">
+        <div class="piece_admin">
+          <img src= "{{piece.photo_url}}" style='height: 180px; width:300px;' >
+          <br />
+          <h5>Title: {{piece.title}}</h5>
+          <h5>Price: {{piece.price}}</h5>
+          <button onclick={{action 'deletePiece' piece.id}}>Delete Piece</button>
+          {{#link-to 'admin.pieces.piece' piece.id}}
+            <h5>Update Piece</h5>
+            <br />
+          {{/link-to}}
+          <br />
+          <br />
+        </div>
+      </div>
+    {{/each}}
+  </div>
+  <div class="col-xs-6">
+    {{outlet}}
+  </div>
+</div>

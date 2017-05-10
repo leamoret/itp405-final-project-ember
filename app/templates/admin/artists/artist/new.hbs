@@ -1,0 +1,14 @@
+<form onsubmit={{action 'createPiece' model.artist.artist.id}}>
+  <br />
+    Title     :{{input type="text" value=title}}
+    <br />
+    Price      :{{input type="text" value=price}}
+    <br />
+    Photo_url    :{{input type="text" value=photo_url}}
+    <br />
+    <br />
+    <button type="submit">Save New Piece</button>
+    <br />
+</form>
+
+{{outlet}}

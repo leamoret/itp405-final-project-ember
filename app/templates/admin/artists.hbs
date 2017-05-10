@@ -1,17 +1,23 @@
 <div class="container">
   <div class="col-xs-6">
+    <div class= "row">
+      {{#link-to 'admin.artists.new'}}
+        <h4>Add an artist</h4>
+        <br />
+      {{/link-to}}
+    </div>
     {{#each model as |artist|}}
-      <div class= "row">
-        {{#link-to 'admin.artists.new'}}
-          <h4>Add an artist</h4>
-          <br />
-        {{/link-to}}
-      </div>
       <div class = "row">
         <div class="artist_admin">
-          <img src= "{{artist.photo_url}}" >
+          <img src= "{{artist.photo_url}}" style='height: 180px; width:180px;' >
           <br />
-          <h5>{{artist.name}}</h5>
+          <h5>Name: {{artist.name}}</h5>
+          <h5>Age: {{artist.age}}</h5>
+          <h5>Biography: {{artist.biography}}</h5>
+          {{#link-to 'admin.artists.artist' artist.id}}
+            <button>Update Artist</button>
+            <br />
+          {{/link-to}}
           <button onclick={{action 'deleteArtist' artist.id}}>Delete Artist</button>
           <br />
           <br />
